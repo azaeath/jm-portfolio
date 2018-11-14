@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/* CSS Document */
+body, html {
+	background: #121212;
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 1.8em;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	line-height: 1.2em;
+	margin: 2.1em 0 0.7em;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.4em;
+}
+h5 {
+	font-size: 1.2em;
+}
+h6 {
+	font-size: 1em;
+}
+a {
+	color: #fff;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 80vw;
+	width: 100%;
+	padding: 0 6em 3em;
+}
+.diagonal {
+	position: relative;
+	width: 100%;
+	background: url("https://i.redd.it/nj1cs95widn11.png") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #121212;
+	display: flex;
+	flex-direction: column;
+	height: calc(50vh - 40px);
+	align-items: center;
+	justify-content: center;
+}
+.diagonal:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+.diagonal:after {
+	content: "";
+	position: absolute;
+	right: -10px;
+	bottom: -1px;
+	border-left-color: #121212;
+	border-left-style: solid;
+	border-left-width: calc(100vw + 800px);
+	border-top: 12vw solid transparent;
+}
+.diagonal h1 {
+	color: #fff;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-top: -1em;
+}
+blockquote {
+	border-left: 3px solid #00CC8F;
+	color: #fff;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 1.25em;
+	font-style: italic;
+	line-height: 1.8em;
+	margin: 1.1em -4em;
+	padding: 1em 2em;
+	position: relative;
+	transition: 0.2s border ease-in-out;
+	z-index: 0;
+}
+blockquote:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -4px;
+	height: 2em;
+	background-color: #fff;
+	width: 5px;
+	margin-top: -1em;
+}
+blockquote:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -0.5em;
+	color: #00CC8F;
+	font-family: "Ionicons";
+	font-style: normal;
+	line-height: 1em;
+	text-align: center;
+	text-indent: -2px;
+	width: 1em;
+	margin-top: -0.5em;
+	transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
+}
+blockquote.format:before, blockquote.format:after {
+	display: none;
+}
+blockquote.book:after {
+	content: "";
+}
+blockquote.podcast:after {
+	content: "";
+}
+blockquote.lyrics:after {
+	content: "";
+}
+blockquote.favorite:after {
+	content: "";
+}
+blockquote:active:after {
+	transform: rotateY(360deg);
+}
+blockquote cite {
+	display: block;
+	font-size: 0.75em;
+	line-height: 1.8em;
+	margin-top: 1em;
+}
+/* This next bit is pretty much all navigation elements. Making the nav bar look and function as it does, including the drop down menus. */
+.nav-bar {
+	background-color: #282828;
+	position: relative;
+	z-index: 1;
+}
+.navigation {
+	/* Controls the style of the navigation bar as it relates to the background and space taken by margins and padding. */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: #121212;
+	border-bottom: solid 3px #282828;
+}
+.navigation::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation li {
+	float: left;
+}
+.navigation li:hover {
+	background: #121212;
+}
+.navigation li:first-child {
+	border-radius: 5px 0 0 5px;
+}
+.navigation li a {
+	display: block;
+	padding: 0px 20px;
+	text-decoration: none;
+	line-height: 40px;
+}
+.navigation li a:hover {
+	color: #00cc8f;
+}
+.navigation li a:active {
+	color: #00cc8f;
+	background-color: #282828;
+}
+.navigation ul {
+	display: none;
+	position: absolute;
+	list-style: none;
+	margin-left: -3px;
+	padding: 0;
+	overflow: hidden;
+}
+.navigation ul li {
+	float: none;
+}
+.navigation li:hover > ul {
+	display: block;
+	background: #121212;
+	border: solid 3px #282828;
+	border-top: 0;
+	border-radius: 0 0 8px 8px;
+}
+.navigation li:hover > ul li:hover {
+	border-radius: 0 0 5px 5px;
+}
+.navigation li li a:hover {
+	background: #121212;
+	color: #00cc8f;
+}
+.navigation ul li:last-child a, .navigation ul li:last-child a:hover {
+	border-radius: 0 0 5px 5px;
+}
+.diagonal img {
+	/* Controls the sizing of the logo contained within the box that creates the diagonal. */
+	max-width: 65px;
+	height: auto;
+	position: relative;
+	float: none;
+	display: inline-block;
+}
+.center {
+	/* Centers the elements contained within the diagonal container, considering the struggle previously undertaken trying to understand the flex box. */
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+/* Begin media queries. */
+@media (max-width: 1200px) {
+	body, html {
+		font-size: 18px;
+	}
+}
+@media (max-width: 980px) {
+	body, html {
+		font-size: 16px;
+	}
+	.container {
+		max-width: 720px;
+		padding: 0 3em 3em;
+	}
+	blockquote {
+		font-size: 1.1em;
+		margin: 1.1em -2em;
+	}
+}
+@media (max-width: 768px) {
+	body, html {
+		font-size: 16px;
+	}
+	.container {
+		padding: 0 2em 3em;
+	}
+	blockquote {
+		border-top: 2px solid #00CC8F;
+		border-bottom: 2px solid #00CC8F;
+		border-left: none;
+		margin: 1.5em 0;
+		padding: 1.5em 1em;
+	}
+	blockquote:before {
+		left: 50%;
+		top: 0;
+		height: 4px;
+		margin-top: -3px;
+		margin-left: -1em;
+		width: 2em;
+	}
+	blockquote:after {
+		font-size: 0.75em;
+		left: 50%;
+		top: 0;
+		margin-top: -0.5em;
+		margin-left: -0.5em;
+	}
+	blockquote cite {
+		text-align: right;
+	}
+}
