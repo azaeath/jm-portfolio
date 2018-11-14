@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<!-- Begin navigation. -->
+	<!-- TemplateBeginEditable name="Nav-Bar" -->
+	<div class="nav-bar">
+		<ul class="navigation">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a>
+				<ul>
+					<li><a href="#">Music</a></li>
+					<li><a href="#">Personal Work</a></li>
+					<li><a href="#">Professional Work</a></li>
+					<li><a href="#">School Work</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About Me</a>
+				<ul>
+					<li><a href="#">Contact Info</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Misc.</a>
+				<ul>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Other Ventures</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- TemplateEndEditable -->
+	<!-- Navigation ends here. -->
+	<div class="clear"></div>
+	<!-- Begin diagonal. -->
+	<header class="diagonal">
+		
+		<h1>
+			<div class="center">
+				<a href="index.html"><img src="logo.png" alt="LOGO"></a>
+				<br>
+				<!-- TemplateBeginEditable name="Page Header" -->
+				Justin Mull
+				<!-- TemplateEndEditable -->
+			</div>
+		</h1>
+	</header>
+	<!-- Diagonal header ends here. -->
+	<!-- TemplateBeginEditable name="content" -->
+	<div class="container"></div>
+	<!-- TemplateEndEditable -->
+</body>
+</html>
