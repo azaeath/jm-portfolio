@@ -2,12 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- TemplateBeginEditable name="doctitle" -->
-<title>Untitled Document</title>
-<!-- TemplateEndEditable -->
-<!-- TemplateBeginEditable name="head" -->
-<!-- TemplateEndEditable -->
-<link href="../main.css" rel="stylesheet" type="text/css">
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>Untitled Document</title>
+	<!-- TemplateEndEditable -->
+	<!-- TemplateBeginEditable name="head" -->
+	<!-- TemplateEndEditable -->
+	<link href="../main.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 
 <body>

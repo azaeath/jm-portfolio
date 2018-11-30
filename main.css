@@ -143,13 +143,29 @@ blockquote cite {
 	line-height: 1.8em;
 	margin-top: 1em;
 }
+.hamburger {
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	padding: 3px 0;
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 99;
+	display: none;
+}
+.hamburger div {
+	background-color: white;
+	height: 3px;
+}
 /* This next bit is pretty much all navigation elements. Making the nav bar look and function as it does, including the drop down menus. */
 .nav-bar {
 	background-color: #282828;
 	position: relative;
 	z-index: 1;
 }
-.navigation {
+@media (min-width:769px){
+	.navigation {
 	/* Controls the style of the navigation bar as it relates to the background and space taken by margins and padding. */
 	list-style: none;
 	margin: 0;
@@ -157,61 +173,61 @@ blockquote cite {
 	background: #121212;
 	border-bottom: solid 3px #282828;
 }
-.navigation::after {
+	.navigation::after {
   content: "";
   display: block;
   clear: both;
 }
-
-.navigation li {
-	float: left;
-}
-.navigation li:hover {
-	background: #121212;
-}
-.navigation li:first-child {
-	border-radius: 5px 0 0 5px;
-}
-.navigation li a {
-	display: block;
-	padding: 0px 20px;
-	text-decoration: none;
-	line-height: 40px;
-}
-.navigation li a:hover {
-	color: #00cc8f;
-}
-.navigation li a:active {
-	color: #00cc8f;
-	background-color: #282828;
-}
-.navigation ul {
-	display: none;
-	position: absolute;
-	list-style: none;
-	margin-left: -3px;
-	padding: 0;
-	overflow: hidden;
-}
-.navigation ul li {
-	float: none;
-}
-.navigation li:hover > ul {
-	display: block;
-	background: #121212;
-	border: solid 3px #282828;
-	border-top: 0;
-	border-radius: 0 0 8px 8px;
-}
-.navigation li:hover > ul li:hover {
-	border-radius: 0 0 5px 5px;
-}
-.navigation li li a:hover {
-	background: #121212;
-	color: #00cc8f;
-}
-.navigation ul li:last-child a, .navigation ul li:last-child a:hover {
-	border-radius: 0 0 5px 5px;
+	.navigation li {
+		float: left;
+	}
+	.navigation li:hover {
+		background: #121212;
+	}
+	.navigation li:first-child {
+		border-radius: 5px 0 0 5px;
+	}
+	.navigation li a {
+		display: block;
+		padding: 0px 20px;
+		text-decoration: none;
+		line-height: 40px;
+	}
+	.navigation li a:hover {
+		color: #00cc8f;
+	}
+	.navigation li a:active {
+		color: #00cc8f;
+		background-color: #282828;
+	}
+	.navigation ul {
+		display: none;
+		position: absolute;
+		list-style: none;
+		margin-left: -3px;
+		padding: 0;
+		overflow: hidden;
+	}
+	.navigation ul li {
+		float: none;
+	}
+	.navigation li:hover > ul {
+		display: block;
+		background: #121212;
+		border: solid 3px #282828;
+		border-top: 0;
+		border-radius: 0 0 8px 8px;
+	}
+	.navigation li:hover > ul li:hover {
+		border-radius: 0 0 5px 5px;
+	}
+	.navigation li li a:hover {
+		background: #121212;
+		color: #00cc8f;
+	}
+	.navigation ul li:last-child a, .navigation ul li:last-child a:hover {
+		border-radius: 0 0 5px 5px;
+	}
 }
 .diagonal img {
 	/* Controls the sizing of the logo contained within the box that creates the diagonal. */
@@ -280,5 +296,62 @@ blockquote cite {
 	}
 	blockquote cite {
 		text-align: right;
+	}
+	.hamburger {
+		display: block;
+	}
+	.navigation {
+		position: absolute;
+		background-color: #121212;
+		top: -20px;
+		right: 0;
+		padding: 40px;
+		transform: translateX(100%);
+		transition-duration: .3s;
+	}
+	.navigation:after {
+		content:"";
+		display: block;
+		clear: both;
+	}
+	.navigation li {
+		list-style: none;
+		font-size: 30px;
+		text-align: center;
+	}
+	.navigation li:hover {
+		background-color: #282828;
+	}
+	.navigation li:first-child {
+		
+	}
+	.navigation li a {
+		display: block;
+		padding: 20px 0px;
+		text-decoration: none;
+		line-height: 40px;
+	}
+	.navigation li a:hover {
+		color: #00cc8f;
+	}
+	.navigation li a:active {
+		color: #00cc8f;
+		background-color: #282828;
+	}
+	.navigation ul {
+		display: none;
+		list-style: none;
+		overflow: hidden;
+	}
+	.navigation ul li {
+		float: none;
+	}
+	.navigation li:hover > ul {
+		display: block;
+		
+		
+	}
+	.active .navigation {
+		transform: translateX(0);
 	}
 }
